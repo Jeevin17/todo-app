@@ -1,9 +1,9 @@
 [project]
 name = "todo-app"
 version = "0.1.0"
-description = "Add your description here"
+description = "A app to manage task at cli using rich as TUI"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "rich>=14.2.0",
-]
+] 
