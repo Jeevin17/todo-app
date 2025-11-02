@@ -3,4 +3,4 @@
 uv.lock
 .git/
 tasks.json
-
+main.py
