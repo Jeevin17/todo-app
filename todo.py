@@ -76,13 +76,14 @@ def list_tasks(tasks):
 
 
 def add_tasks(tasks):
-    task = pr.ask("[red]Enter a new task: [/]")
     try:
+        task = pr.ask("[red]Enter a new task or <C-d> to exit: [/]")
         tasks.append({"tasks": task, "status": "not done"})
         print(panel.fit("[yellow] TASK SUCCESSFULLY UPDATED!!![/]"))
         save_tasks(tasks)
-    except Exception as e:
-        print(panel.fit(f"[bright red] error occured!!!!!{e}[/]"))
+    except EOFError:
+        print("\n")
+        print(panel.fit("canceling the task...."))
 
 
 def mark_done(tasks):
@@ -140,7 +141,7 @@ def main():
             elif choice == "5":
                 print(panel.fit("[green]thankyou bye[/]"))
             break
-        except (EOFError, KeyboardInterrupt):
+        except KeyboardInterrupt:
             print("\n")
             print(panel("[green]goodbye!!!![/]"))
             break
