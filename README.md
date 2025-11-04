@@ -10,7 +10,7 @@ This is a simple todo application that runs in the terminal. It allows you to ad
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/todo-app.git
+    git clone https://github.com/jeevin17/todo-app.git
     ```
 2.  Navigate to the project directory:
     ```bash
